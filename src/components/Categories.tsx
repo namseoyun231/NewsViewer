@@ -33,13 +33,13 @@ const categories = [
 ];
 
 export default function Categories() {
-  return (
-    <div className={styles.categoryBlock}>
-      {categories.map((c) => (
-        <NavLink key={c.name} className={styles.category} to={}>
-          {c.text}
-        </NavLink>
-      ))}
-    </div>
-  );
+    return (
+        <div className={styles.categoryBlock}>
+            {categories.map((c) => (
+                <NavLink key={c.name} className={styles.category} to={}>
+                    {c.text}
+                </NavLink>
+            ))}
+        </div>
+    );
 }
