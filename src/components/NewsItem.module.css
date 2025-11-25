@@ -32,3 +32,9 @@
 .newsItem + .newsItem {
     margin-top: 3rem;
 }
+
+.title a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: inherit;
+}
