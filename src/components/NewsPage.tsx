@@ -1,4 +1,4 @@
-// src/components/NewsPage.jsx
+// src/components/NewsPage.tsx
 import Categories from "./Categories";
 import NewsList from "./NewsList";
 

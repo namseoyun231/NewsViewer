@@ -5,9 +5,9 @@ export default function NewsItem({
 }: {
   article: {
     title: string;
-    description: string;
+    description: string |  null;
     url: string;
-    urlToImage: string;
+    urlToImage: string | null;
   };
 }) {
   const { title, description, url, urlToImage } = article;
