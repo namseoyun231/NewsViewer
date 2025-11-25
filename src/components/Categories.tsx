@@ -36,7 +36,13 @@ export default function Categories() {
     return (
         <div className={styles.categoryBlock}>
             {categories.map((c) => (
-                <NavLink key={c.name} className={styles.category} to={}>
+                <NavLink
+                    key={c.name}
+                    className={({ isActive }) =>
+                        isActive ? `${styles.category} ${styles.active}` : styles.category
+                    }
+                    to={c.name === "all" ? "/" : `/${c.name}`}
+                >
                     {c.text}
                 </NavLink>
             ))}
