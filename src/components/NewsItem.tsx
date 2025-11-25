@@ -22,7 +22,7 @@ export default function NewsItem({
       )}
 
       <div className={styles.contents}>
-        <h2>
+          <h2 className={styles.title}>
           <a href={url} target="_blank" rel="noopener noreferrer">
             {title}
           </a>
