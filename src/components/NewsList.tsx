@@ -1,4 +1,3 @@
-// src/components/NewsList.tsx
 import { useState, useEffect } from "react";
 import styles from "./NewsList.module.css";
 import NewsItem from "./NewsItem";
