@@ -1,35 +1,35 @@
 import styles from "./Categories.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 
 const categories = [
-  {
-    name: "all",
-    text: "전체보기",
-  },
-  {
-    name: "business",
-    text: "비즈니스",
-  },
-  {
-    name: "entertainment",
-    text: "엔터테인먼트",
-  },
-  {
-    name: "health",
-    text: "건강",
-  },
-  {
-    name: "science",
-    text: "과학",
-  },
-  {
-    name: "sports",
-    text: "스포츠",
-  },
-  {
-    name: "technology",
-    text: "기술",
-  },
+    {
+        name: "all",
+        text: "전체보기",
+    },
+    {
+        name: "business",
+        text: "비즈니스",
+    },
+    {
+        name: "entertainment",
+        text: "엔터테인먼트",
+    },
+    {
+        name: "health",
+        text: "건강",
+    },
+    {
+        name: "science",
+        text: "과학",
+    },
+    {
+        name: "sports",
+        text: "스포츠",
+    },
+    {
+        name: "technology",
+        text: "기술",
+    },
 ];
 
 export default function Categories() {
@@ -38,10 +38,10 @@ export default function Categories() {
             {categories.map((c) => (
                 <NavLink
                     key={c.name}
-                    to={c.name === "all" ? "/" : `/${c.name}`}
                     className={({ isActive }) =>
-                        isActive ? styles.active : undefined
+                        isActive ? `${styles.category} ${styles.active}` : styles.category
                     }
+                    to={c.name === "all" ? "/" : `/${c.name}`}
                 >
                     {c.text}
                 </NavLink>
@@ -49,9 +49,3 @@ export default function Categories() {
         </div>
     );
 }
-
-
-
-
-
-
