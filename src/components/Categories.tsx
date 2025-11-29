@@ -1,5 +1,5 @@
 import styles from "./Categories.module.css";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 
 const categories = [
   {
@@ -38,10 +38,10 @@ export default function Categories() {
             {categories.map((c) => (
                 <NavLink
                     key={c.name}
-                    className={({ isActive }) =>
-                        isActive ? `${styles.category} ${styles.active}` : styles.category
-                    }
                     to={c.name === "all" ? "/" : `/${c.name}`}
+                    className={({ isActive }) =>
+                        isActive ? styles.active : undefined
+                    }
                 >
                     {c.text}
                 </NavLink>
@@ -49,3 +49,9 @@ export default function Categories() {
         </div>
     );
 }
+
+
+
+
+
+
